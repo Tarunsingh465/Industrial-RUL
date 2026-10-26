@@ -1,0 +1,18 @@
+{
+  "dataset": "NASA PCoE C-MAPSS FD001",
+  "algorithm": "XGBoost Regressor",
+  "evaluation_unit": "last observed cycle per test engine",
+  "n_test_engines": 100,
+  "MAE_cycles": 13.520789394378662,
+  "RMSE_cycles": 18.631369659558846,
+  "R2": 0.7989842803468601,
+  "NASA_asymmetric_score_lower_is_better": 633.8145920119731,
+  "early_predictions_pct": 48.0,
+  "late_predictions_pct": 52.0,
+  "training_target_cap_cycles": 125,
+  "predictions_clipped_at_zero_for_evaluation": true,
+  "MAE_bootstrap_95pct_interval_cycles": [
+    11.143969756126403,
+    16.078980238080025
+  ]
+}

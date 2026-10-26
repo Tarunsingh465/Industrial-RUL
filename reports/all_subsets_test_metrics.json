@@ -1,0 +1,108 @@
+{
+  "dataset": "NASA PCoE C-MAPSS FD001-FD004",
+  "algorithm": "Pooled XGBoost Regressor",
+  "evaluation_unit": "last observed cycle per official test engine",
+  "n_test_engines": 707,
+  "training_target_cap_cycles": 200,
+  "training_feature_mode": "regime_aware",
+  "capped_metric_definition": "true and predicted RUL clipped to 125 cycles for diagnostic comparison",
+  "uncapped_official_rul_metrics": {
+    "n_engines": 707,
+    "MAE_cycles": 20.43592533414401,
+    "RMSE_cycles": 28.21301973761512,
+    "R2": 0.694840399094378,
+    "NASA_asymmetric_score_lower_is_better": 68666.64694259707,
+    "early_predictions_pct": 41.3012729844413,
+    "late_predictions_pct": 58.698727015558696
+  },
+  "capped_125_rul_metrics": {
+    "n_engines": 707,
+    "MAE_cycles": 12.802190422000102,
+    "RMSE_cycles": 19.15239867985097,
+    "R2": 0.7929070961416933,
+    "NASA_asymmetric_score_lower_is_better": 10966.003026925784,
+    "early_predictions_pct": 34.22913719943423,
+    "late_predictions_pct": 50.495049504950494
+  },
+  "by_subset_uncapped_metrics": {
+    "FD001": {
+      "n_engines": 100,
+      "MAE_cycles": 16.516680560112,
+      "RMSE_cycles": 22.068983876327895,
+      "R2": 0.7179636208005395,
+      "NASA_asymmetric_score_lower_is_better": 1772.267734941822,
+      "early_predictions_pct": 38.0,
+      "late_predictions_pct": 62.0
+    },
+    "FD002": {
+      "n_engines": 259,
+      "MAE_cycles": 19.608579025765643,
+      "RMSE_cycles": 26.751356879995257,
+      "R2": 0.7525602263748395,
+      "NASA_asymmetric_score_lower_is_better": 9170.583376129558,
+      "early_predictions_pct": 49.034749034749034,
+      "late_predictions_pct": 50.965250965250966
+    },
+    "FD003": {
+      "n_engines": 100,
+      "MAE_cycles": 19.788700685501098,
+      "RMSE_cycles": 27.455294421546423,
+      "R2": 0.560110733246943,
+      "NASA_asymmetric_score_lower_is_better": 11364.233705251041,
+      "early_predictions_pct": 34.0,
+      "late_predictions_pct": 66.0
+    },
+    "FD004": {
+      "n_engines": 248,
+      "MAE_cycles": 23.141286770182273,
+      "RMSE_cycles": 31.960228913366066,
+      "R2": 0.6564043646009711,
+      "NASA_asymmetric_score_lower_is_better": 46359.56212627464,
+      "early_predictions_pct": 37.5,
+      "late_predictions_pct": 62.5
+    }
+  },
+  "by_subset_capped_metrics": {
+    "FD001": {
+      "n_engines": 100,
+      "MAE_cycles": 12.298305926322938,
+      "RMSE_cycles": 16.886547082449354,
+      "R2": 0.8224290158635262,
+      "NASA_asymmetric_score_lower_is_better": 658.6382010421602,
+      "early_predictions_pct": 35.0,
+      "late_predictions_pct": 59.0
+    },
+    "FD002": {
+      "n_engines": 259,
+      "MAE_cycles": 11.952991428062262,
+      "RMSE_cycles": 17.46369311171251,
+      "R2": 0.8345895904415092,
+      "NASA_asymmetric_score_lower_is_better": 2270.9905266745477,
+      "early_predictions_pct": 39.38223938223938,
+      "late_predictions_pct": 44.78764478764479
+    },
+    "FD003": {
+      "n_engines": 100,
+      "MAE_cycles": 12.667125902175904,
+      "RMSE_cycles": 18.725702443081392,
+      "R2": 0.7714107202358877,
+      "NASA_asymmetric_score_lower_is_better": 1869.9690754552998,
+      "early_predictions_pct": 33.0,
+      "late_predictions_pct": 56.00000000000001
+    },
+    "FD004": {
+      "n_engines": 248,
+      "MAE_cycles": 13.946696232403479,
+      "RMSE_cycles": 21.698730206301544,
+      "R2": 0.7451336070260219,
+      "NASA_asymmetric_score_lower_is_better": 6166.405223753777,
+      "early_predictions_pct": 29.03225806451613,
+      "late_predictions_pct": 50.806451612903224
+    }
+  },
+  "official_test_labels_used_for_fit": false,
+  "uncapped_MAE_bootstrap_95pct_interval_cycles": [
+    19.047720971067015,
+    21.824694129744547
+  ]
+}

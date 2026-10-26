@@ -1,0 +1,28 @@
+# Python environments
+renv/
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Dataset files
+CMAPSSData/
+data/raw/
+data/processed/
+
+# Experimental model backups
+models/xgb_rul_model_pre_*.joblib
+models/xgb_rul_model_robustness_selected_snapshot.joblib
+
+# Secrets and logs
+.env
+.streamlit/secrets.toml
+*.log
+# Local model backups
+models/backups/
+models/.gitkeep

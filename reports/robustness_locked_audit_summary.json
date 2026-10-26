@@ -1,0 +1,60 @@
+{
+  "dataset": "NASA C-MAPSS FD001-FD004 training-engine locked audit",
+  "selection": {
+    "feature_mode": "baseline",
+    "target_cap": "200",
+    "best_params": {
+      "colsample_bytree": 1.0,
+      "learning_rate": 0.03,
+      "max_depth": 3,
+      "min_child_weight": 5,
+      "n_estimators": 350,
+      "reg_lambda": 3.0,
+      "subsample": 1.0
+    }
+  },
+  "audit_engines": 142,
+  "pseudo_cutoff_cases": 1027,
+  "metrics_raw_rul_pooled_cases": {
+    "n_cases": 1027,
+    "nasa_score_total": 881773.3848019093,
+    "nasa_score_per_case": 858.5914165549264,
+    "mae_uncapped": 29.235626421629394,
+    "rmse_uncapped": 38.779364816640445,
+    "r2_uncapped": 0.6650852134918936,
+    "mean_bias_pred_minus_true": 2.609293087663994,
+    "late_predictions_pct": 61.830574488802334,
+    "early_predictions_pct": 38.169425511197666,
+    "mae_capped125_diagnostic": 15.157880543849949
+  },
+  "metrics_raw_rul_macro_subset": {
+    "macro_subset_nasa_score_per_case": 567.3758685086344,
+    "macro_subset_mae_uncapped": 28.003910162827797,
+    "macro_subset_late_predictions_pct": 61.73653083028083,
+    "macro_subset_mean_bias": 4.072515799884359,
+    "subset_metric_summary_json": "{\"FD001\": {\"subset_bias\": -5.491018690362809, \"subset_late_pct\": 48.3531746031746, \"subset_mae\": 23.84158368850511, \"subset_nasa_score\": 264.7747544110889}, \"FD002\": {\"subset_bias\": 6.878348960826613, \"subset_late_pct\": 70.79136141636141, \"subset_mae\": 26.08119556698061, \"subset_nasa_score\": 1459.1416244398415}, \"FD003\": {\"subset_bias\": 0.25098108684732806, \"subset_late_pct\": 54.50396825396825, \"subset_mae\": 26.35406474038249, \"subset_nasa_score\": 169.4331928195058}, \"FD004\": {\"subset_bias\": 14.651751842226302, \"subset_late_pct\": 73.29761904761905, \"subset_mae\": 35.73879665544298, \"subset_nasa_score\": 376.1539023641013}}"
+  },
+  "engine_bootstrap_95pct_interval_macro_subset_mean_engine_mae": [
+    25.396777283622544,
+    30.580328801203226
+  ],
+  "seed_stability_summary": {
+    "macro_subset_nasa_score": {
+      "mean": 567.3758685086344,
+      "std": 0.0
+    },
+    "macro_subset_mae": {
+      "mean": 28.0039101628278,
+      "std": 3.972054645195637e-15
+    },
+    "pooled_case_mae": {
+      "mean": 29.235626421629394,
+      "std": 0.0
+    },
+    "late_predictions_pct": {
+      "mean": 61.830574488802334,
+      "std": 0.0
+    }
+  },
+  "note": "Audit engines were not used for configuration selection or hyperparameter tuning. Five predeclared model seeds quantify model stochasticity on the same locked audit. Metrics are internal pseudo-truncation results, not official NASA test-set metrics."
+}

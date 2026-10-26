@@ -1,0 +1,105 @@
+{
+  "selected_candidate": "pseudohuber_slope10__row_uniform",
+  "objective": "reg:pseudohubererror",
+  "objective_params": {
+    "huber_slope": 10.0
+  },
+  "sample_weight_policy": "row_uniform",
+  "fixed_xgboost_params": {
+    "n_estimators": 550,
+    "max_depth": 5,
+    "learning_rate": 0.03,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "min_child_weight": 5,
+    "reg_lambda": 7.0,
+    "tree_method": "hist",
+    "n_jobs": 4
+  },
+  "target_cap_cycles": 200,
+  "rolling_window_cycles": 10,
+  "feature_mode": "regime_aware",
+  "feature_count": 140,
+  "audit_engines": 142,
+  "audit_cases": 426,
+  "metrics": {
+    "n_cases": 426,
+    "n_engines": 142,
+    "pooled_mae": 24.44006628952396,
+    "pooled_rmse": 38.40107270240835,
+    "pooled_r2": 0.7660235716385484,
+    "macro_subset_mae": 24.204253945624792,
+    "macro_subset_rmse": 27.98714788553538,
+    "macro_subset_nasa_score_per_case": 1604.1864545469593,
+    "macro_subset_late_pct": 53.32051282051282,
+    "macro_subset_mean_bias": -6.758551991703229,
+    "macro_subset_within_10_pct": 47.86538461538461,
+    "macro_subset_within_20_pct": 59.71153846153845,
+    "macro_subset_within_30_pct": 71.15384615384615
+  },
+  "stratified_engine_bootstrap_95pct_interval_macro_subset_engine_mae": [
+    20.06811877314682,
+    28.93784785143821
+  ],
+  "per_subset_metrics": [
+    {
+      "subset": "FD001",
+      "engines": 20,
+      "cases": 60,
+      "mae": 20.702947060267128,
+      "rmse": 24.578887148815205,
+      "nasa_score_per_case": 93.18912235015608,
+      "late_pct": 60.0,
+      "mean_bias": -2.883180832862854,
+      "within_10_pct": 53.33333333333333,
+      "within_20_pct": 60.0,
+      "within_30_pct": 73.33333333333333
+    },
+    {
+      "subset": "FD002",
+      "engines": 52,
+      "cases": 156,
+      "mae": 20.535578372482306,
+      "rmse": 23.687681697672662,
+      "nasa_score_per_case": 119.1861272090169,
+      "late_pct": 59.61538461538461,
+      "mean_bias": 1.5037124178921564,
+      "within_10_pct": 46.79487179487179,
+      "within_20_pct": 62.179487179487175,
+      "within_30_pct": 76.28205128205128
+    },
+    {
+      "subset": "FD003",
+      "engines": 20,
+      "cases": 60,
+      "mae": 26.344804031650227,
+      "rmse": 29.503324112643792,
+      "nasa_score_per_case": 905.2057319311459,
+      "late_pct": 45.0,
+      "mean_bias": -15.630746419231098,
+      "within_10_pct": 53.33333333333333,
+      "within_20_pct": 63.33333333333333,
+      "within_30_pct": 71.66666666666666
+    },
+    {
+      "subset": "FD004",
+      "engines": 50,
+      "cases": 150,
+      "mae": 29.233686318099497,
+      "rmse": 34.178698583009854,
+      "nasa_score_per_case": 5299.164836697519,
+      "late_pct": 48.66666666666666,
+      "mean_bias": -10.023993132611116,
+      "within_10_pct": 37.99999999999999,
+      "within_20_pct": 53.33333333333333,
+      "within_30_pct": 63.33333333333333
+    }
+  ],
+  "guardrails": {
+    "official_rul_label_files_loaded": false,
+    "audit_used_for_candidate_selection": false,
+    "engine_level_split": true,
+    "transformer_fit_only_on_development_plus_validation_engines": true
+  },
+  "interpretation": "Fresh internal age-matched pseudo-cutoff audit on training engines; not official NASA test performance or real-world industrial validation."
+}

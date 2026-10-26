@@ -1,0 +1,48 @@
+{
+  "dataset": "NASA PCoE C-MAPSS FD001",
+  "algorithm": "XGBoost Regressor only",
+  "n_training_engines": 100,
+  "n_training_rows": 20631,
+  "n_model_features": 63,
+  "selected_sensors": [
+    "s_2",
+    "s_3",
+    "s_4",
+    "s_6",
+    "s_7",
+    "s_8",
+    "s_9",
+    "s_11",
+    "s_12",
+    "s_13",
+    "s_14",
+    "s_15",
+    "s_17",
+    "s_20",
+    "s_21"
+  ],
+  "selected_settings": [
+    "setting_1",
+    "setting_2"
+  ],
+  "rul_training_cap_cycles": 125,
+  "grouped_cv_best_mae_capped_target_cycles": 11.730899622824138,
+  "validation_last_cycle_metrics": {
+    "MAE_cycles": 13.774196815490722,
+    "RMSE_cycles": 18.3249800952275,
+    "R2": 0.709614327539122,
+    "NASA_asymmetric_score_lower_is_better": 129.05804734486316,
+    "early_predictions_pct": 40.0,
+    "late_predictions_pct": 60.0,
+    "n_validation_engines": 20
+  },
+  "best_params": {
+    "subsample": 0.8,
+    "reg_lambda": 7.0,
+    "n_estimators": 350,
+    "min_child_weight": 1,
+    "max_depth": 4,
+    "learning_rate": 0.03,
+    "colsample_bytree": 0.9
+  }
+}

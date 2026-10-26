@@ -1,0 +1,87 @@
+{
+  "dataset": "NASA PCoE C-MAPSS FD001-FD004 pooled model",
+  "algorithm": "XGBoost Regressor only",
+  "training_rows": 160359,
+  "training_engines": 709,
+  "training_rows_by_subset": {
+    "FD001": 20631,
+    "FD002": 53759,
+    "FD003": 24720,
+    "FD004": 61249
+  },
+  "training_engines_by_subset": {
+    "FD001": 100,
+    "FD002": 260,
+    "FD003": 100,
+    "FD004": 249
+  },
+  "n_model_features": 92,
+  "sensor_channels_retained": [
+    "s_1",
+    "s_2",
+    "s_3",
+    "s_4",
+    "s_5",
+    "s_6",
+    "s_7",
+    "s_8",
+    "s_9",
+    "s_10",
+    "s_11",
+    "s_12",
+    "s_13",
+    "s_14",
+    "s_15",
+    "s_16",
+    "s_17",
+    "s_18",
+    "s_19",
+    "s_20",
+    "s_21"
+  ],
+  "operating_settings_retained": [
+    "setting_1",
+    "setting_2",
+    "setting_3"
+  ],
+  "subset_one_hot_features": [
+    "subset_FD001",
+    "subset_FD002",
+    "subset_FD003",
+    "subset_FD004"
+  ],
+  "rul_training_cap_cycles": 125,
+  "grouped_cv_best_mae_capped_target_cycles": 11.260534663638488,
+  "pseudo_truncated_validation": {
+    "uncapped_rul_validation": {
+      "MAE_cycles": 15.634426610570559,
+      "RMSE_cycles": 20.665428119906018,
+      "R2": 0.5982073655813647,
+      "NASA_asymmetric_score_lower_is_better": 1613.711997215637,
+      "early_predictions_pct": 33.098591549295776,
+      "late_predictions_pct": 66.90140845070422,
+      "n_validation_engines": 142
+    },
+    "capped_125_target_validation": {
+      "MAE_cycles": 15.621827310239764,
+      "RMSE_cycles": 20.660004577863393,
+      "R2": 0.5984182349889806,
+      "NASA_asymmetric_score_lower_is_better": 1613.2759844050634,
+      "early_predictions_pct": 33.098591549295776,
+      "late_predictions_pct": 66.90140845070422,
+      "n_validation_engines": 142
+    },
+    "validation_note": "Held-out training engines at simulated truncation points; not the official test set."
+  },
+  "best_params": {
+    "subsample": 0.9,
+    "reg_lambda": 7.0,
+    "n_estimators": 550,
+    "min_child_weight": 5,
+    "max_depth": 5,
+    "learning_rate": 0.03,
+    "colsample_bytree": 0.9
+  },
+  "official_test_data_used_for_fit": false,
+  "model_artifact": "d:\\industrial_rul_xgboost_project\\models\\xgb_rul_model_all_subsets.joblib"
+}

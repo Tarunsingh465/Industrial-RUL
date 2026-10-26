@@ -1,0 +1,42 @@
+{
+  "model_artifact": "d:\\industrial_rul_xgboost_project\\models\\xgb_rul_model_all_subsets.joblib",
+  "previous_model_snapshot": "d:\\industrial_rul_xgboost_project\\models\\xgb_rul_model_pre_loss_experiments_20261026_114654.joblib",
+  "dataset": "NASA PCoE C-MAPSS FD001-FD004 pooled XGBoost RUL model",
+  "training_rows": 160359,
+  "training_engines": 709,
+  "feature_count": 140,
+  "selected_candidate": "pseudohuber_slope10__row_uniform",
+  "selected_objective": "reg:pseudohubererror",
+  "objective_specific_params": {
+    "huber_slope": 10.0
+  },
+  "sample_weight_policy": "row_uniform",
+  "target_cap": 200,
+  "rolling_window": 10,
+  "feature_mode": "regime_aware",
+  "validation_metrics": {
+    "candidate_id": "pseudohuber_slope10__row_uniform",
+    "loss_id": "pseudohuber_slope10",
+    "objective": "reg:pseudohubererror",
+    "objective_params": "{\"huber_slope\": 10.0}",
+    "weight_policy": "row_uniform",
+    "target_cap": 200,
+    "rolling_window": 10,
+    "feature_mode": "regime_aware",
+    "n_cases": 426,
+    "n_engines": 142,
+    "pooled_mae": 27.775687734373438,
+    "pooled_rmse": 49.30536872708841,
+    "pooled_r2": 0.6820264182427282,
+    "macro_subset_mae": 29.04021309810858,
+    "macro_subset_rmse": 33.722015762295065,
+    "macro_subset_nasa_score_per_case": 97163665.82433614,
+    "macro_subset_late_pct": 48.269230769230774,
+    "macro_subset_mean_bias": -12.156760254910168,
+    "macro_subset_within_10_pct": 47.16025641025641,
+    "macro_subset_within_20_pct": 58.217948717948715,
+    "macro_subset_within_30_pct": 70.08333333333331
+  },
+  "locked_audit_summary": "d:\\industrial_rul_xgboost_project\\reports\\loss_objective_locked_audit_summary.json",
+  "official_test_rul_labels_used_for_selection": false
+}

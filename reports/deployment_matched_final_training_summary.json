@@ -1,0 +1,29 @@
+{
+  "model_artifact": "d:\\industrial_rul_xgboost_project\\models\\xgb_rul_model_all_subsets.joblib",
+  "previous_model_snapshot": "d:\\industrial_rul_xgboost_project\\models\\xgb_rul_model_robustness_selected_snapshot.joblib",
+  "dataset": "NASA PCoE C-MAPSS FD001-FD004 pooled XGBoost model (deployment-matched validation-selected)",
+  "training_rows": 160359,
+  "training_engines": 709,
+  "feature_count": 140,
+  "selected_configuration": {
+    "candidate_id": "regime_aware_w10_cap200",
+    "feature_mode": "regime_aware",
+    "rolling_window": 10,
+    "target_cap": 200
+  },
+  "validation_metrics": {
+    "candidate_id": "regime_aware_w10_cap200",
+    "feature_mode": "regime_aware",
+    "rolling_window": 10,
+    "target_cap": 200,
+    "pooled_mae": 25.712334757119837,
+    "pooled_rmse": 39.03443531084899,
+    "pooled_r2": 0.7437779585746529,
+    "macro_subset_mae": 25.530911826002296,
+    "macro_subset_nasa_score_per_case": 5007.106551557262,
+    "macro_subset_late_pct": 51.74358974358974,
+    "macro_subset_mean_bias": -4.443088736625818
+  },
+  "locked_audit_summary_file": "d:\\industrial_rul_xgboost_project\\reports\\deployment_matched_locked_audit_summary.json",
+  "official_test_labels_used_for_selection": false
+}

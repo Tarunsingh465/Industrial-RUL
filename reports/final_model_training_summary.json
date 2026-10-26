@@ -1,0 +1,35 @@
+{
+  "model_artifact": "d:\\industrial_rul_xgboost_project\\models\\xgb_rul_model_all_subsets.joblib",
+  "previous_model_snapshot": "d:\\industrial_rul_xgboost_project\\models\\xgb_rul_model_pre_cap250_20261026_124732.joblib",
+  "dataset": "NASA PCoE C-MAPSS FD001-FD004 pooled XGBoost RUL model",
+  "training_rows": 160359,
+  "training_engines": 709,
+  "feature_count": 140,
+  "target_cap_cycles": 250,
+  "objective": "reg:pseudohubererror",
+  "objective_params": {
+    "huber_slope": 10.0
+  },
+  "sample_weight_policy": "row_uniform",
+  "rolling_window_cycles": 10,
+  "feature_mode": "regime_aware",
+  "saved_artifact_preflight": "passed",
+  "official_test_rul_labels_loaded": false,
+  "selection_rationale": {
+    "candidate_id": "cap_250__pseudohuber_slope10__row_uniform",
+    "selection_metric": "mean macro-subset MAE across three engine-level validation splits; macro-subset RMSE as corroborating metric; NASA-style asymmetric score reported as a trade-off",
+    "validation_splits": [
+      20261026,
+      20261027,
+      20261028
+    ],
+    "validation_macro_subset_mae_mean": 27.083,
+    "validation_macro_subset_mae_std": 3.524,
+    "validation_macro_subset_rmse_mean": 31.385,
+    "validation_macro_subset_rmse_std": 4.034,
+    "validation_macro_subset_nasa_score_per_case_mean": 8535621.094,
+    "note": "Cap 250 had the lowest macro-subset MAE on each of the three repeated validation splits. Cap 350 had the lowest mean NASA-style score, so the selected configuration reflects an explicit MAE-first decision, not a universal win on every metric.",
+    "official_test_rul_labels_used_for_selection": false,
+    "official_test_note": "Official test labels/results were inspected earlier in project development; any official-test numbers are exploratory benchmark results, not a pristine blind test."
+  }
+}
